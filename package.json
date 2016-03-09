@@ -1,7 +1,7 @@
 {
-  "name": "es6-with-mocha-chai-test",
+  "name": "go-pipeline-watcher",
   "version": "1.0.0",
-  "description": "It's a boilerplate for writing code in ES6 with the TDD framework as mocha and chai",
+  "description": "It will watch the go pipelines and play the sound whenever build fails/success",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -19,11 +19,13 @@
     "gulp-browserify": "^0.5.1",
     "gulp-mocha": "^2.2.0",
     "gulp-rename": "^1.2.2",
-    "mocha": "^2.4.5"
+    "jsdom": "^8.1.0",
+    "mocha": "^2.4.5",
+    "nock": "^7.2.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/muralikrishna8/es6-gulp-mocha-test.git"
+    "url": "git+ssh://git@github.com/muralikrishna8/go-pipeline-watcher-chrome-extension.git"
   },
-  "homepage": "https://github.com/muralikrishna8/es6-gulp-mocha-test.git#readme"
+  "homepage": "https://github.com/muralikrishna8/go-pipeline-watcher-chrome-extension.git#readme"
 }

@@ -12,10 +12,16 @@ gulp.task("build", () => {
           "transform": ["babelify"]
       }))
     .pipe(rename("app.js"))
-    .pipe(gulp.dest("./dist/"));
+    .pipe(gulp.dest("./dist"));
 });
 
 gulp.task("test", () => {
-  return gulp.src("test/**/*.js", { read: false })
+  return gulp.src(["test/**/*Spec.js", "test/testHelper.js"], { read: false })
     .pipe(mocha());
 })
+
+gulp.task('watch', function() {
+	gulp.watch("src/**/*.js", ["build"]).on('change', function(event) {
+	  console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+	});
+});
